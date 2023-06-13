@@ -24,7 +24,7 @@ public class AboutActivity extends AppCompatActivity {
         git.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gotoURL("https://github.com/EdaRosli/Bill-Electric.git");
+                gotoURL("https://github.com/SakinaShazleena/ElectricityBillCalculator");
             }
         });
     }

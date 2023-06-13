@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">My Electricity Calculator</string>
-    <string name="student_information">STUDENT INFORMATION:</string>
-    <string name="nur_waheeda_binti_rosli">NUR WAHEEDA BINTI ROSLI</string>
-    <string name="id_2021106547_class_rcs2405a_course_ict602">ID: 2021106547 - CLASS: RCS2405A- COURSE: ICT602</string>
-    <string name="_2023_my_electricity_calculator_all_rights_reserved">© 2023 My Electricity Calculator. All rights reserved.</string>
-    <string name="enter_the_kwh">Enter the kWh</string>
-    <string name="rebate_0_5">Rebate (0% - 5%)</string>
-    <string name="about_me_page">About Me Page</string>
+    <string name="app_name">Electricity Bill Calculator</string>
+    <string name="Developers">Developer:</string>
+    <string name="name1">Nur Sakina Shazleena Binti Muhamad Nizam</string>
+    <string name="matricandclass2">2021989801, RCS2405A, ICT 602</string>
+    <string name="copyright_statement">© 2023 Electricity Bill Calculator. All rights reserved.</string>
+    <string name="calculate">Calculate</string>
+    <string name="rebate">Rebate (0%-5%)</string> />
+
 </resources>

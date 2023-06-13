@@ -75,36 +75,36 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        double kwh = Double.parseDouble(unitsString);
+        double Unit = Double.parseDouble(unitsString);
         double rebate = Double.parseDouble(rebateString);
 
 
-        double tc = 0.0;
+        double totalCharges  = 0.0;
 
-        if (kwh <= 200) {
-            tc = kwh * 0.218;
-        } else if (kwh <= 300) {
+        if (Unit <= 200) {
+            totalCharges  = Unit * 0.218;
+        } else if (Unit <= 300) {
             double unitsFirstBlock = 200;
-            double unitsNextBlock = kwh - unitsFirstBlock;
-            tc = (unitsFirstBlock * 0.218) + (unitsNextBlock * 0.334);
-        } else if (kwh <= 600) {
+            double unitsNextBlock = Unit - unitsFirstBlock;
+            totalCharges  = (unitsFirstBlock * 0.218) + (unitsNextBlock * 0.334);
+        } else if (Unit <= 600) {
             double unitsFirstBlock = 200;
             double unitsSecondBlock = 100;
-            double unitsNextBlock = kwh - unitsFirstBlock - unitsSecondBlock;
-            tc = (unitsFirstBlock * 0.218) + (unitsSecondBlock * 0.334) + (unitsNextBlock * 0.516);
+            double unitsNextBlock = Unit - unitsFirstBlock - unitsSecondBlock;
+            totalCharges  = (unitsFirstBlock * 0.218) + (unitsSecondBlock * 0.334) + (unitsNextBlock * 0.516);
         } else {
             double unitsFirstBlock = 200;
             double unitsSecondBlock = 100;
             double unitsThirdBlock = 300;
-            double unitsNextBlock = kwh - unitsFirstBlock - unitsSecondBlock - unitsThirdBlock;
-            tc = (unitsFirstBlock * 0.218) + (unitsSecondBlock * 0.334) + (unitsThirdBlock * 0.516) + (unitsNextBlock * 0.546);
+            double unitsNextBlock = Unit - unitsFirstBlock - unitsSecondBlock - unitsThirdBlock;
+            totalCharges  = (unitsFirstBlock * 0.218) + (unitsSecondBlock * 0.334) + (unitsThirdBlock * 0.516) + (unitsNextBlock * 0.546);
         }
 
 
-        tc *= (1 - rebate / 100);
+        totalCharges *= (1 - rebate / 100);
 
 
-        resultTextView.setText("The Electric Bill: RM " + String.format("%.2f", tc));
+        resultTextView.setText("Final Total Charges Bill: RM " + String.format("%.2f", totalCharges));
     }
 
     private void clearInput() {
